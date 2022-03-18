@@ -4,19 +4,19 @@ const { reverseString } = require('./script');
 const { calculator } = require("./script");
 const { caesarCipher } = require('./script');
 const { analyzeArray } = require('./script');
-test("capitalize first character 1", () => {
+test("capitalize first character 1, test all lowercase string", () => {
     expect(capitalize("hello")).toBe("Hello");
 });
-test("capitalize first character 2", () => {
+test("capitalize first character 2, test string with spaces", () => {
     expect(capitalize("what the fuck")).toBe("What the fuck");
 });
-test("reverse string test 1", () => {
+test("reverse string test 1, test a single word", () => {
     expect(reverseString("hello")).toBe("olleh");
 });
-test("reverse string test 2", () => {
+test("reverse string test 2, test two or more words with spaces", () => {
     expect(reverseString("Hello There")).toBe("erehT olleH");
 });
-test("calculator add", () => {
+test("calculator add, test add func", () => {
     expect(calculator.add(1, 2)).toBe(3);
 });
 test("calculator subtract", () => {
@@ -28,11 +28,11 @@ test("calculator multiply", () => {
 test("calculator divide", () => {
     expect(calculator.div(1, 2)).toBe(.5);
 });
-test("ceasar cipher 1", () => {
+test("ceasar cipher 1, test two or more words with spaces", () => {
     expect(caesarCipher("defend the east wall of the castle"))
         .toBe("efgfoe uif fbtu xbmm pg uif dbtumf");
 });
-test("ceasar cipher 2", () => {
+test("ceasar cipher 2, test the entire alphabet see if z wrap to a", () => {
     expect(caesarCipher("abcdefghijklmnopqrstuvwxyz"))
         .toBe("bcdefghijklmnopqrstuvwxyza");
 });
